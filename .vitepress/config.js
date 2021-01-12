@@ -34,7 +34,7 @@ function formatDate(date) {
   if (!date instanceof Date) {
     date = new Date(date)
   }
-  date.setHours(24)
+  date.setUTCHours(12)
   return {
     time: +date,
     string: date.toLocaleDateString('en-US', {
