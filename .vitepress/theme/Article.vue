@@ -47,13 +47,14 @@
 import Date from './Date.vue'
 import Author from './Author.vue'
 import { computed } from 'vue'
-import { useFrontmatter, useSiteData } from 'vitepress'
+import { useFrontmatter, useSiteData, useRoute } from 'vitepress'
 
 const data = useFrontmatter()
+const route = useRoute()
 const posts = useSiteData().value.customData.posts
 
 function findCurrentIndex() {
-  return posts.findIndex(p => p.title === data.value.title)
+  return posts.findIndex(p => p.href === route.path)
 }
 
 // use the customData date which contains pre-resolved date info
