@@ -16,7 +16,7 @@
                 <a class="text-gray-900" :href="href">{{ title }}</a>
               </h2>
               <div v-if="excerpt" class="prose max-w-none text-gray-500">
-                <p>{{ excerpt }}</p>
+                <p v-html="excerpt"></p>
               </div>
             </div>
             <div class="text-base leading-6 font-medium">
