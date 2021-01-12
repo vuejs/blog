@@ -1,3 +1,8 @@
+:root {
+  --c-brand: #3eaf7c;
+  --c-brand-light: #4abf8a;
+}
+
 .link {
   color: var(--c-brand);
 }
