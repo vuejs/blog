@@ -1,7 +1,7 @@
 <template>
   <article class="xl:divide-y xl:divide-gray-200">
     <header class="pt-6 xl:pb-10 space-y-1 text-center">
-      <Date :date="data.date" />
+      <Date :date="date" />
       <h1
         class="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-5xl md:leading-14"
       >{{ data.title }}</h1>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div v-if="prevPost" class="space-y-8 py-8">
-          <div >
+          <div>
             <h2 class="text-xs tracking-wide uppercase text-gray-500">Previous Article</h2>
             <div class="link">
               <a :href="prevPost.href">{{ prevPost.title }}</a>
@@ -55,6 +55,9 @@ const posts = useSiteData().value.customData.posts
 function findCurrentIndex() {
   return posts.findIndex(p => p.title === data.value.title)
 }
+
+// use the customData date which contains pre-resolved date info
+const date = computed(() => posts[findCurrentIndex()].date)
 const nextPost = computed(() => posts[findCurrentIndex() - 1])
 const prevPost = computed(() => posts[findCurrentIndex() + 1])
 </script>
