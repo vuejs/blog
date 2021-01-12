@@ -1,0 +1,18 @@
+{
+  "name": "vue-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.1",
+    "gray-matter": "^4.0.2",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2",
+    "vitepress": "^0.11.1"
+  }
+}
