@@ -31,10 +31,7 @@
             <a :href="prevPost.href">{{ prevPost.title }}</a>
           </div>
         </div>
-        <div class="py-6">
-          <a class="link" href="/feed.rss">RSS Feed</a>
-        </div>
-        <div class="py-6">
+        <div class="pt-8">
           <a class="link" href="/">← Back to the blog</a>
         </div>
       </footer>
