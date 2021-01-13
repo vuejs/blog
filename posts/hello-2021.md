@@ -36,7 +36,7 @@ In addition to all of these exciting projects, it’s also been incredible to se
 
 ## Looking Forward to 2021
 
-For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through the transition period. In the meanwhile Here is a non-exhaustive list of things we’re looking forward to:
+For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through the transition period. In the meanwhile, here is a non-exhaustive list of things we’re looking forward to:
 
 - Stablize current RC/Beta sub projects
 - Finalize SFC proposals and further polish IDE support
