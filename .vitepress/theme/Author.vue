@@ -18,6 +18,7 @@
               <a
                 :href="'https://twitter.com/' + data.twitter"
                 target="_blank"
+                rel="noopnener noreferrer"
                 class="link"
               >{{ data.twitter }}</a>
             </dd>
