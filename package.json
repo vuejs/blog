@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build",
+    "build": "vitepress build && node ./.vitepress/genFeed",
     "serve": "vitepress serve"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.2.1",
+    "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
     "postcss": "^8.2.4",
     "tailwindcss": "^2.0.2",
