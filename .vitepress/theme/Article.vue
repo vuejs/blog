@@ -19,23 +19,22 @@
       <footer
         class="text-sm font-medium leading-5 divide-y divide-gray-200 xl:col-start-1 xl:row-start-2"
       >
-        <div v-if="nextPost" class="space-y-8 py-8">
-          <div>
-            <h2 class="text-xs tracking-wide uppercase text-gray-500">Next Article</h2>
-            <div class="link">
-              <a :href="nextPost.href">{{ nextPost.title }}</a>
-            </div>
+        <div v-if="nextPost" class="py-8">
+          <h2 class="text-xs tracking-wide uppercase text-gray-500">Next Article</h2>
+          <div class="link">
+            <a :href="nextPost.href">{{ nextPost.title }}</a>
           </div>
         </div>
-        <div v-if="prevPost" class="space-y-8 py-8">
-          <div>
-            <h2 class="text-xs tracking-wide uppercase text-gray-500">Previous Article</h2>
-            <div class="link">
-              <a :href="prevPost.href">{{ prevPost.title }}</a>
-            </div>
+        <div v-if="prevPost" class="py-8">
+          <h2 class="text-xs tracking-wide uppercase text-gray-500">Previous Article</h2>
+          <div class="link">
+            <a :href="prevPost.href">{{ prevPost.title }}</a>
           </div>
         </div>
-        <div class="pt-8">
+        <div class="py-6">
+          <a class="link" href="/feed.rss">RSS Feed</a>
+        </div>
+        <div class="py-6">
           <a class="link" href="/">← Back to the blog</a>
         </div>
       </footer>

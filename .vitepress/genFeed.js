@@ -13,11 +13,7 @@ const feed = new Feed({
   image: 'https://vuejs.org/images/logo.png',
   favicon: `${url}/favicon.ico`,
   copyright:
-    'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors',
-  feedLinks: {
-    rss: `${url}/feed.rss`,
-    atom: `${url}/feed.atom`
-  }
+    'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
 })
 
 getPosts(true).forEach((post) => {
@@ -46,4 +42,3 @@ getPosts(true).forEach((post) => {
 })
 
 fs.writeFileSync(path.resolve(__dirname, 'dist/feed.rss'), feed.rss2())
-fs.writeFileSync(path.resolve(__dirname, 'dist/feed.atom'), feed.atom1())
