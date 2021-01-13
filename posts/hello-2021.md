@@ -36,7 +36,7 @@ In addition to all of these exciting projects, it’s also been incredible to se
 
 ## Looking Forward to 2021
 
-For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through the transition period. In the meanwhile, here is a non-exhaustive list of things we’re looking forward to:
+While Vue 3 beings many fundamental improvements and opens up avenues for future iterations, we are still in a transition period - both in terms of the library ecosystem and best practices involving new APIs. For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through this transition period. Here is a non-exhaustive list of things we’re looking forward to:
 
 - Stablize current RC/Beta sub projects
 - Finalize SFC proposals and further polish IDE support
@@ -44,7 +44,7 @@ For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and co
 - Vue 2 → 3 Migration Tools (estimated end of Q1)
 - Vue CLI 5 w/ webpack 5 support (estimated Q1)
 - Vue 3 IE 11 Compatibility Build (estimated Q2)
-- Vue 2.7 (estimated Q2)
+- Vue 2.7 (estimated Q2/3)
 - SSR support in Vite (TBD)
 - Vuex 5 (TBD)
 
