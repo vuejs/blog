@@ -12,7 +12,7 @@ With a new year upon us, we also have a new blog! In this post, we would like to
 
 ## Looking Back at 2020
 
-2020 has been a challenging year, to say the least. Nonetheless, the team has made the best of a difficult situation. Despiate an already massive user base, Vue's [NPM downloads](https://npm-stat.com/charts.html?package=vue&from=2020-01-01&to=2020-12-31) and [Devtools weekly active users](https://chrome-stats.com/d/nhdogjmejiglipccpnnnanhbledajbpd) both grew close to 50% throughout 2020. As time of this writing, Vue is being downloaded ~8M times per month on NPM and the devtools extension has ~1.5M weekly active users.
+2020 has been a challenging year, to say the least. Nonetheless, the team has made the best of a difficult situation. Despite an already massive user base, Vue's [NPM downloads](https://npm-stat.com/charts.html?package=vue&from=2020-01-01&to=2020-12-31) and [Devtools weekly active users](https://chrome-stats.com/d/nhdogjmejiglipccpnnnanhbledajbpd) both grew close to 50% throughout 2020. As time of this writing, Vue is being downloaded ~8M times per month on NPM and the devtools extension has ~1.5M weekly active users.
 
 Aside from routine maintenance, there are some incredible things that we accomplished as a team:
 
@@ -25,7 +25,7 @@ Aside from routine maintenance, there are some incredible things that we accompl
 
 In addition to iterating on the existing ecosystem, we also invested in exploring improvements on new frontiers:
 
-- New Single File Component (SFC) feature proposals with the goal of leveraing the SFC compiler for more DX and performance wins:
+- New Single File Component (SFC) feature proposals with the goal of leveraging the SFC compiler for more DX and performance wins:
   - [`<script setup>`](https://github.com/vuejs/rfcs/pull/227)
   - [CSS variables injection in `<style>`](https://github.com/vuejs/rfcs/pull/231)
 - [VueDX](https://github.com/znck/vue-developer-experience) for providing better IDE integrations and development workflow
@@ -36,7 +36,7 @@ In addition to all of these exciting projects, it’s also been incredible to se
 
 ## Looking Forward to 2021
 
-While Vue 3 beings many fundamental improvements and opens up avenues for future iterations, we are still in a transition period - both in terms of the library ecosystem and best practices involving new APIs. For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through this transition period. Here is a non-exhaustive list of things we’re looking forward to:
+While Vue 3 beings many fundamental improvements and opens up avenues for future iterations, we are still in a transition period - both in terms of the library ecosystem and best practices involving new APIs. For early 2021, our focus will be further stabilizing the Vue 3 ecosystem, and continuing to help the community through this transition period. Here is a non-exhaustive list of things we’re looking forward to:
 
 - Stablize current RC/Beta sub projects
 - Finalize SFC proposals and further polish IDE support
