@@ -14,6 +14,6 @@
     "gray-matter": "^4.0.2",
     "postcss": "^8.2.4",
     "tailwindcss": "^2.0.2",
-    "vitepress": "^0.11.1"
+    "vitepress": "^0.11.3"
   }
 }
