@@ -25,7 +25,7 @@ Aside from routine maintenance, there are some incredible things that we accompl
 
 In addition to iterating on the existing ecosystem, we also invested in exploring improvements on new frontiers:
 
-- New Single File Component (SFC) feature proposals with the goal of leveraing the SFC compiler for more DX and performance wins:
+- New Single File Component (SFC) feature proposals with the goal of leveraging the SFC compiler for more DX and performance wins:
   - [`<script setup>`](https://github.com/vuejs/rfcs/pull/227)
   - [CSS variables injection in `<style>`](https://github.com/vuejs/rfcs/pull/231)
 - [VueDX](https://github.com/znck/vue-developer-experience) for providing better IDE integrations and development workflow
