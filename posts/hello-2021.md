@@ -20,26 +20,26 @@ Aside from routine maintenance, there are some incredible things that we accompl
 - [Brand new docs site for Vue 3](https://v3.vuejs.org/)
 - [Vue Router 4](https://github.com/vuejs/vue-router-next/releases/tag/v4.0.0)
 - [Vuex 4 (RC)](https://next.vuex.vuejs.org/)
-- [Vue DevTools 6 with Vue 3 support (Beta)](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)
+- [Vue DevTools 6.0 with Vue 3 support (Beta)](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg)
 - [Vue Test Utils 2 (Beta)](https://vue-test-utils.vuejs.org/v2/guide/introduction.html)
-- [Composition API Plugin for Vue 2](https://github.com/vuejs/composition-api)
 
 In addition to iterating on the existing ecosystem, we also invested in exploring improvements on new frontiers:
 
-- New Single File Component (SFC) feature proposals:
+- New Single File Component (SFC) feature proposals with the goal of leveraing the SFC compiler for more DX and performance wins:
   - [`<script setup>`](https://github.com/vuejs/rfcs/pull/227)
   - [CSS variables injection in `<style>`](https://github.com/vuejs/rfcs/pull/231)
 - [VueDX](https://github.com/znck/vue-developer-experience) for providing better IDE integrations and development workflow
 - [Vite](http://vitejs.dev/), a new build tool built on top of modern standards
 - [VitePress](https://vitepress.vuejs.org/), a new static site generator built on Vue 3 and Vite
 
-In addition to all of these amazing projects, it’s also been incredible to see the community continue to grow despite the challenges 2020 set forth in terms of being unable to facilitate in-person events. With initiatives such as remote conferences, meetups and other events, it’s been a joy to see the community interacting in new ways that might not have been possible otherwise.
+In addition to all of these exciting projects, it’s also been incredible to see the community continue to grow despite the challenges 2020 set forth in terms of being unable to facilitate in-person events. With initiatives such as remote conferences, meetups and other events, it’s been a joy to see the community interacting in new ways that might not have been possible otherwise.
 
 ## Looking Forward to 2021
 
-For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continue to help the community through the transition period. Here is a non-exhaustive list of things we’re looking forward to:
+For early 2021, our focus will be further stablizing the Vue 3 ecosystem, and continuing to help the community through the transition period. In the meanwhile Here is a non-exhaustive list of things we’re looking forward to:
 
-- Stablizing current RC/Beta sub projects
+- Stablize current RC/Beta sub projects
+- Finalize SFC proposals and further polish IDE support
 - Vue 3.1 (Q1, more details as we finalize the release plan)
 - Vue 2 → 3 Migration Tools (estimated end of Q1)
 - Vue CLI 5 w/ webpack 5 support (estimated Q1)
