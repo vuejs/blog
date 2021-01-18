@@ -6,7 +6,7 @@ const url = `https://blog.vuejs.org`
 
 const feed = new Feed({
   title: 'The Vue Point',
-  description: 'The offical blog for the Vue.js project',
+  description: 'The official blog for the Vue.js project',
   id: url,
   link: url,
   language: 'en',
