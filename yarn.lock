@@ -1321,13 +1321,13 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vite-plugin-windicss@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-0.1.6.tgz#6b89bbac54dd85f7a83d96373293ea56a0f1a34b"
-  integrity sha512-/xun1w479kGxnBd/HAeXk63Dq03ANzcb+rvtJZxVDggPmFOYFwq8bUO28jO5UBJx9xYSGORbhjvGd1uwr5SEVw==
+vite-plugin-windicss@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/vite-plugin-windicss/-/vite-plugin-windicss-0.1.9.tgz#931716509e94eabea0fdc49ae25221a07915632f"
+  integrity sha512-c1FyL34b+Ek4iqf5ER1F+bbZSqOQWTN8Wsi6olJK9lF8NJrzx/2wc0q4K6rj5eCB6qIgK7bcPXD1/5G4DJMqzg==
   dependencies:
     fast-glob "^3.2.5"
-    windicss "^2.1.5"
+    windicss "^2.1.6"
 
 vite@2.0.0-beta.50:
   version "2.0.0-beta.50"
@@ -1390,7 +1390,7 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-windicss@^2.1.5:
+windicss@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/windicss/-/windicss-2.1.6.tgz#39e281d24e42a1dc5271de433350b72508598a66"
   integrity sha512-G+RCA/SC+LVDf9xXNYKjljmNDZOlS4XhZrHySH7Anh9ymTbo4AXsKGqZU1jKWTzSky6IP5fR4ug5YVBo44NV8Q==

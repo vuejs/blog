@@ -10,7 +10,7 @@
   "devDependencies": {
     "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
-    "vite-plugin-windicss": "^0.1.6",
+    "vite-plugin-windicss": "^0.1.9",
     "vitepress": "^0.12.0"
   }
 }
