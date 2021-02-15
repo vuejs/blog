@@ -3,6 +3,14 @@
   --c-brand-light: #4abf8a;
 }
 
+nav img {
+  vertical-align: middle;
+}
+
+.prose hr {
+  border-top: 1px solid #e5e7eb;
+}
+
 .link {
   color: var(--c-brand);
 }

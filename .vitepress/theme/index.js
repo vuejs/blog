@@ -1,4 +1,4 @@
-import './tailwind.css'
+import 'windi.css'
 import './style.css'
 
 import Layout from './Layout.vue'
