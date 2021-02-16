@@ -26,7 +26,7 @@ exports.getPosts = function getPosts(asFeed = false) {
 }
 
 function formatDate(date) {
-  if (!date instanceof Date) {
+  if (!(date instanceof Date)) {
     date = new Date(date)
   }
   date.setUTCHours(12)
