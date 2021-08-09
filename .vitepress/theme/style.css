@@ -11,6 +11,10 @@ nav img {
   vertical-align: middle;
 }
 
+p img {
+  margin: 0px auto;
+}
+
 .prose hr {
   border-top: 1px solid #e5e7eb;
 }

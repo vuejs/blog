@@ -43,9 +43,9 @@ While Vue 3 beings many fundamental improvements and opens up avenues for future
 - Vue 3.1 (Q1, more details as we finalize the release plan)
 - Vue 2 → 3 Migration Tools (estimated end of Q1)
 - Vue CLI 5 w/ webpack 5 support (estimated Q1)
-- Vue 3 IE 11 Compatibility Build (estimated Q2)
+- ~~Vue 3 IE 11 Compatibility Build (estimated Q2)~~
 - Vue 2.7 (estimated Q2/3)
-- SSR support in Vite (TBD)
+- SSR support in Vite
 - Vuex 5 (TBD)
 
 In addition, we are excited about other frameworks and libraries in the ecosystem making progress towards Vue 3 support. And of course, we can’t wait to see what new ideas and tools you all have as we embark on a new chapter in the Vue.js roadmap.
