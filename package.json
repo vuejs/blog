@@ -12,7 +12,7 @@
     "cheap-watch": "^1.0.3",
     "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
-    "vitepress": "^0.15.6"
+    "vitepress": "^0.16.0"
   },
   "dependencies": {
     "tailwindcss": "^2.2.7"
