@@ -1,5 +1,5 @@
 // @ts-check
-const { getPosts } = require('./getPosts')
+require('./genMetadata').watchPosts()
 
 /**
  * @type {import('vitepress').UserConfig}
@@ -16,8 +16,5 @@ module.exports = {
         href: '/favicon.ico'
       }
     ]
-  ],
-  customData: {
-    posts: getPosts()
-  }
+  ]
 }

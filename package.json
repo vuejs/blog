@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
+    "cheap-watch": "^1.0.3",
     "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
     "vitepress": "^0.15.6"

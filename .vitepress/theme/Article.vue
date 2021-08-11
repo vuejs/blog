@@ -3,11 +3,11 @@ import Date from './Date.vue'
 import Author from './Author.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
+import posts from '../metadata.json'
 
-const { frontmatter: data, site } = useData()
+const { frontmatter: data } = useData()
 
 const route = useRoute()
-const posts = site.value.customData.posts
 
 function findCurrentIndex() {
   return posts.findIndex((p) => p.href === route.path)

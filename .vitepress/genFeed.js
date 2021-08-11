@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { Feed } = require('feed')
-const { getPosts } = require('./getPosts')
+const { getPosts } = require('./genMetadata')
 const url = `https://blog.vuejs.org`
 
 const feed = new Feed({

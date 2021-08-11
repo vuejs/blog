@@ -1,8 +1,6 @@
 <script setup>
 import Date from './Date.vue'
-import { useData } from 'vitepress'
-
-const { site } = useData()
+import posts from '../metadata.json'
 </script>
 
 <template>
@@ -26,7 +24,7 @@ const { site } = useData()
     <ul class="divide-y divide-gray-200">
       <li
         class="py-12"
-        v-for="{ title, href, date, excerpt } of site.customData.posts"
+        v-for="{ title, href, date, excerpt } of posts"
       >
         <article
           class="
