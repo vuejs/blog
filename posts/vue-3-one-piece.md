@@ -3,11 +3,11 @@ title: Announcing Vue 3.0 "One Piece"
 date: 2020-09-18
 author: Evan You
 gravatar: eca93da2c67aadafe35d477aa8f454b8
-twitter: "@youyuxi"
+twitter: '@youyuxi'
 ---
 
 <p align="center">
-  <img width="200" src="https://user-images.githubusercontent.com/499550/93624428-53932780-f9ae-11ea-8d16-af949e16a09f.png">
+  <img width="200" height="177px" src="https://user-images.githubusercontent.com/499550/93624428-53932780-f9ae-11ea-8d16-af949e16a09f.png" alt="one-piece-logo">
 </p>
 
 Today we are proud to announce the official release of Vue.js 3.0 "One Piece". This new major version of the framework provides improved performance, smaller bundle sizes, better TypeScript integration, new APIs for tackling large scale use cases, and a solid foundation for long-term future iterations of the framework.
@@ -20,7 +20,7 @@ The 3.0 release represents over 2 years of development efforts, featuring [30+ R
 
 Vue had a simple mission from its humble beginning: to be an approachable framework that anyone can quickly learn. As our user base grew, the framework also grew in scope to adapt to the increasing demands. Over time, it evolved into what we call a "Progressive Framework": a framework that can be learned and adopted incrementally, while providing continued support as the user tackles more and more demanding scenarios.
 
-Today, with over 1.3 million users worldwide<sup>*</sup>, we are seeing Vue being used in a wildly diverse range of scenarios, from sprinkling interactivity on traditional server-rendered pages, to full-blown single page applications with hundreds of components. Vue 3 takes this flexibility even further.
+Today, with over 1.3 million users worldwide<sup>\*</sup>, we are seeing Vue being used in a wildly diverse range of scenarios, from sprinkling interactivity on traditional server-rendered pages, to full-blown single page applications with hundreds of components. Vue 3 takes this flexibility even further.
 
 ### Layered internal modules
 
@@ -88,4 +88,4 @@ To learn more about Vue 3.0, check out our [new documentation website](https://v
 
 ---
 
-- *based on [Vue Devtools Chrome extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) weekly active users as reported by Google.
+- \*based on [Vue Devtools Chrome extension](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) weekly active users as reported by Google.
