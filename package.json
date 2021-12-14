@@ -4,15 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build --mpa && node ./.vitepress/genFeed",
+    "build": "vitepress build && node ./.vitepress/genFeed",
     "serve": "vitepress serve"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
-    "cheap-watch": "^1.0.3",
     "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
-    "vitepress": "^0.18.0"
+    "vitepress": "^0.20.6"
   },
   "dependencies": {
     "tailwindcss": "^2.2.7"

@@ -1,10 +1,6 @@
-// @ts-check
-require('./genMetadata').watchPosts()
+import { defineConfig } from 'vitepress'
 
-/**
- * @type {import('vitepress').UserConfig}
- */
-module.exports = {
+export default defineConfig({
   title: 'The Vue Point',
   description: 'The offical blog for the Vue.js project',
   head: [
@@ -16,5 +12,10 @@ module.exports = {
         href: '/favicon.ico'
       }
     ]
-  ]
-}
+  ],
+  vite: {
+    build: {
+      minify: 'terser'
+    }
+  }
+})

@@ -3,7 +3,7 @@ import Date from './Date.vue'
 import Author from './Author.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
-import posts from '../metadata.json'
+import { data as posts } from '../posts.data'
 
 const { frontmatter: data } = useData()
 

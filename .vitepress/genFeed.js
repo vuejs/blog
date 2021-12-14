@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { Feed } = require('feed')
-const { getPosts } = require('./genMetadata')
+const { load } = require('./posts.data')
 const url = `https://blog.vuejs.org`
 
 const feed = new Feed({
@@ -12,11 +12,10 @@ const feed = new Feed({
   language: 'en',
   image: 'https://vuejs.org/images/logo.png',
   favicon: `${url}/favicon.ico`,
-  copyright:
-    'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
+  copyright: 'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
 })
 
-getPosts(true).forEach((post) => {
+load(true).forEach((post) => {
   const file = path.resolve(__dirname, `dist${post.href}`)
   const rendered = fs.readFileSync(file, 'utf-8')
   const content = rendered.match(

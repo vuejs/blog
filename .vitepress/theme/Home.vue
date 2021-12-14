@@ -1,6 +1,6 @@
 <script setup>
 import Date from './Date.vue'
-import posts from '../metadata.json'
+import { data as posts } from '../posts.data'
 </script>
 
 <template>
@@ -22,10 +22,7 @@ import posts from '../metadata.json'
       <p class="text-lg leading-7 text-gray-500">{{ $frontmatter.subtext }}</p>
     </div>
     <ul class="divide-y divide-gray-200">
-      <li
-        class="py-12"
-        v-for="{ title, href, date, excerpt } of posts"
-      >
+      <li class="py-12" v-for="{ title, href, date, excerpt } of posts">
         <article
           class="
             space-y-2
