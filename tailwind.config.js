@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./.vitepress/theme/**/*.vue'],
+  content: ['./.vitepress/theme/**/*.vue'],
   plugins: [require('@tailwindcss/typography')]
 }
