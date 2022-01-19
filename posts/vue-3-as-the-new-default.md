@@ -86,6 +86,6 @@ In addition, translation repos for the main documentation are moved to the [`vue
 
 ### Devtools extension
 
-Devtools v6, which is currently published under the [beta channel]() on Chrome Web Store, will be moved to the [stable channel](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) upon the version switch.
+Devtools v6, which is currently published under the [beta channel](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg) on Chrome Web Store, will be moved to the [stable channel](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) upon the version switch.
 
 The current stable channel will still be available. It will be moved to the [legacy channel](https://chrome.google.com/webstore/detail/vuejs-devtools/iaajmlceplecbljialhhkmedjlpdblhp).
