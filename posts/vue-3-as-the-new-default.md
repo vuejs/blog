@@ -8,6 +8,8 @@ twitter: '@youyuxi'
 
 TL;DR: Vue 3 will become the new default version on **February 3rd, 2022**!
 
+See [Actionables](/posts/vue-3-as-the-new-default.html#actionables) for potential actions required before the switch.
+
 ---
 
 ## From a Library to a Framework
@@ -47,11 +49,11 @@ Outside of Vue core, we have improved almost every aspect of the framework:
 - Simpler state management via [Pinia](https://pinia.vuejs.org/)
 - New devtools extension with simultaneous Vue 2 / Vue 3 support and a [plugin system](https://devtools.vuejs.org/plugin/plugins-guide.html) that allows community libraries to hook into the devtools panels
 
-We also completely reworked the main documentation. [The new vuejs.org](https://staging.vuejs.org) (currently in staging) will provide updated framework overview and recommendations, flexible learning paths for users from different backgrounds, the ability to toggle between Options API and Composition API throughout the guide and examples, and many new deep dive sections. It's also *very* fast - which we will discuss in more details in a separate blog post soon.
+We also completely reworked the main documentation. [The new vuejs.org](https://staging.vuejs.org) (currently in staging) will provide updated framework overview and recommendations, flexible learning paths for users from different backgrounds, the ability to toggle between Options API and Composition API throughout the guide and examples, and many new deep dive sections. It's also _very_ fast - which we will discuss in more details in a separate blog post soon.
 
 ## Version Switch Details
 
-Here are the details on what we mean by "the new default":
+Here are the details on what we mean by "the new default". In addition, please read the [Actionables](#actionables) section to see if you need to make certain changes to avoid breakage.
 
 ### npm dist tags
 
@@ -73,7 +75,7 @@ Note that the new vuejs.org will be the [completely reworked version](https://st
 
 The current Vue 2 versions of these sites will be moved to new addresses (the version prefixes indicate the libraries' respective versions, not Vue core's):
 
-- vuejs.org -> v2.vuejs.org
+- vuejs.org -> v2.vuejs.org (old v2 URLs will auto redirect to the new address)
 - router.vuejs.org -> v3.router.vuejs.org
 - vuex.vuejs.org -> v3.vuex.vuejs.org
 - vue-test-utils.vuejs.org -> v1.test-utils.vuejs.org
@@ -93,8 +95,39 @@ All GitHub repos under the `vuejs` organization will switch to Vue 3 versions in
 
 In addition, translation repos for the main documentation are moved to the [`vuejs-translations` organization](https://github.com/vuejs-translations).
 
+GitHub handles repo directs automatically, so previous links to source code and issues should still work.
+
 ### Devtools extension
 
 Devtools v6, which is currently published under the [beta channel](https://chrome.google.com/webstore/detail/vuejs-devtools/ljjemllljcmogpfapbkkighbhhppjdbg) on Chrome Web Store, will be moved to the [stable channel](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) upon the version switch.
 
 The current stable channel will still be available. It will be moved to the [legacy channel](https://chrome.google.com/webstore/detail/vuejs-devtools/iaajmlceplecbljialhhkmedjlpdblhp).
+
+## Actionables
+
+### Unversioned CDN Usage
+
+If you are using Vue 2 via a CDN link without specifying a version, make sure to specify a version range via `@2`:
+
+```diff
+- <script src="https://unpkg.com/vue"></script>
++ <script src="https://unpkg.com/vue@2"></script>
+
+- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
++ <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+```
+
+Note: even if using Vue 3, you should also always specify a version range in production to avoid accidentally loading future major versions.
+
+### NPM `latest` Tag
+
+If you are installing Vue or other official libraries from npm using the `latest` tag or `*`, use an explicit version range now:
+
+```diff
+{
+  "dependencies": {
+-   "vue": "latest"
++   "vue": "^2.6.14"
+  }
+}
+```
