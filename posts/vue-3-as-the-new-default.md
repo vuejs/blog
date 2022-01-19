@@ -38,7 +38,16 @@ At the same time, we kept Vue 2 as the default for documentation and npm install
 
 This soft launch process took longer than we hoped, but we are finally here: we are happy to announce that Vue 3 will become the new default version on **February 3rd, 2022** - 8 years after [Vue was first publicly announced](https://news.ycombinator.com/item?id=7169288).
 
-Not only have we improved almost every aspect of the framework, we also completely reworked the main documentation. [The new docs](https://staging.vuejs.org) (currently in staging) will provide updated framework overview and recommendations, flexible learning paths for users from different backgrounds, the ability to toggle between Options API and Composition API throughout the guide and examples, and many new deep dive sections. It's also *very* fast - which we will discuss in more details in a separate blog post soon.
+Outside of Vue core, we have improved almost every aspect of the framework:
+
+- Blazing fast, [Vite](https://vitejs.dev/)-powered build toolchain
+- More ergonomic Composition API syntax via `<script setup>`
+- Improved TypeScript IDE support for Single File Components via [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- Command line type checking for SFCs via [vue-tsc](https://github.com/johnsoncodehk/volar/tree/master/packages/vue-tsc)
+- Simpler state management via [Pinia](https://pinia.vuejs.org/)
+- New devtools extension with simultaneous Vue 2 / Vue 3 support and a [plugin system](https://devtools.vuejs.org/plugin/plugins-guide.html) that allows community libraries to hook into the devtools panels
+
+We also completely reworked the main documentation. [The new vuejs.org](https://staging.vuejs.org) (currently in staging) will provide updated framework overview and recommendations, flexible learning paths for users from different backgrounds, the ability to toggle between Options API and Composition API throughout the guide and examples, and many new deep dive sections. It's also *very* fast - which we will discuss in more details in a separate blog post soon.
 
 ## Version Switch Details
 
