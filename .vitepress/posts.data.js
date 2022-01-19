@@ -1,6 +1,9 @@
 const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
+const { createMarkdownRenderer } = require('vitepress')
+
+const md = createMarkdownRenderer(process.cwd())
 
 module.exports = {
   watch: '../posts/*.md',
@@ -26,11 +29,12 @@ function getPost(file, postDir, asFeed = false) {
 
   const src = fs.readFileSync(fullePath, 'utf-8')
   const { data, excerpt } = matter(src, { excerpt: true })
+
   const post = {
     title: data.title,
     href: `/posts/${file.replace(/\.md$/, '.html')}`,
     date: formatDate(data.date),
-    excerpt
+    excerpt: md.render(excerpt)
   }
   if (asFeed) {
     // only attach these when building the RSS feed to avoid bloating the
