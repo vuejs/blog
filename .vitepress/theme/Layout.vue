@@ -11,11 +11,20 @@
           />
           <span v-if="!isIndex" class="hidden md:inline">The Vue Point</span>
         </a>
-        <div class="text-base text-gray-500 leading-5">
-          <a class="hover:text-gray-700 mr-4" href="/feed.rss">RSS Feed</a>
+        <div class="text-sm text-gray-500 leading-5">
           <a
             class="hover:text-gray-700"
-            href="https://v3.vuejs.org"
+            href="https://github.com/vuejs/blog"
+            target="_blank"
+            rel="noopener"
+            >GitHub Source</a
+          >
+          <span class="mr-2 ml-2">·</span>
+          <a class="hover:text-gray-700" href="/feed.rss">RSS Feed</a>
+          <span class="mr-2 ml-2">·</span>
+          <a
+            class="hover:text-gray-700"
+            href="https://vuejs.org"
             target="_blank"
             rel="noopener"
             >Vuejs.org →</a
