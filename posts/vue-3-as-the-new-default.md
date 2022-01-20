@@ -1,14 +1,14 @@
 ---
 title: Vue 3 as the New Default
-date: 2022-01-19
+date: 2022-01-20
 author: Evan You
 gravatar: eca93da2c67aadafe35d477aa8f454b8
 twitter: '@youyuxi'
 ---
 
-TL;DR: Vue 3 will become the new default version on **February 3rd, 2022**!
+TL;DR: Vue 3 will become the new default version on **Monday, February 7, 2022**!
 
-See [Actionables](/posts/vue-3-as-the-new-default.html#actionables) for potential actions required before the switch.
+Make sure to read the [Potential Required Actions](#potential-required-actions) section to see if you need to make certain changes before the switch to avoid breakage.
 
 ---
 
@@ -38,7 +38,7 @@ At the same time, we kept Vue 2 as the default for documentation and npm install
 
 ## The New Vue
 
-This soft launch process took longer than we hoped, but we are finally here: we are happy to announce that Vue 3 will become the new default version on **February 3rd, 2022** - 8 years after [Vue was first publicly announced](https://news.ycombinator.com/item?id=7169288).
+This soft launch process took longer than we hoped, but we are finally here: we are excited to announce that Vue 3 will become the new default version on **Monday, February 7, 2022**.
 
 Outside of Vue core, we have improved almost every aspect of the framework:
 
@@ -53,13 +53,13 @@ We also completely reworked the main documentation. [The new vuejs.org](https://
 
 ## Version Switch Details
 
-Here are the details on what we mean by "the new default". In addition, please read the [Actionables](#actionables) section to see if you need to make certain changes to avoid breakage.
+Here are the details on what we mean by "the new default". In addition, please read the [Potential Required Actions](#potential-required-actions) section to see if you need to make certain changes before the switch to avoid breakage.
 
 ### npm dist tags
 
 - `npm install vue` will install Vue 3.
 
-- The `latest` dist tag of all other official npm packages will point to Vue 3 compatible versions, including `vue-router`, `vuex`, `@vue/test-utils`.
+- The `latest` dist tag of all other official npm packages will point to Vue 3 compatible versions, including `vue-router`, `vuex`, `vue-loader`, and `@vue/test-utils`.
 
 ### Official docs and sites
 
@@ -103,7 +103,7 @@ Devtools v6, which is currently published under the [beta channel](https://chrom
 
 The current stable channel will still be available. It will be moved to the [legacy channel](https://chrome.google.com/webstore/detail/vuejs-devtools/iaajmlceplecbljialhhkmedjlpdblhp).
 
-## Actionables
+## Potential Required Actions
 
 ### Unversioned CDN Usage
 
@@ -121,13 +121,23 @@ Note: even if using Vue 3, you should also always specify a version range in pro
 
 ### NPM `latest` Tag
 
-If you are installing Vue or other official libraries from npm using the `latest` tag or `*`, use an explicit version range now:
+If you are installing Vue or other official libraries from npm using the `latest` tag or `*`, please update to explicitly use Vue 2 compatible versions:
 
 ```diff
 {
   "dependencies": {
--   "vue": "latest"
-+   "vue": "^2.6.14"
+-   "vue": "latest",
++   "vue": "^2.6.14",
+-   "vue-router": "latest",
++   "vue-router": "^3.5.3",
+-   "vuex": "latest"
++   "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+-   "vue-loader": "latest",
++   "vue-loader": "^15.9.8",
+-   "@vue/test-utils": "latest"
++   "@vue/test-utils": "^1.3.0"
   }
 }
 ```
