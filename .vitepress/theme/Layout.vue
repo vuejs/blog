@@ -17,10 +17,10 @@
             href="https://github.com/vuejs/blog"
             target="_blank"
             rel="noopener"
-            >GitHub Source</a
+            ><span class="hidden sm:inline">GitHub </span>Source</a
           >
           <span class="mr-2 ml-2">·</span>
-          <a class="hover:text-gray-700" href="/feed.rss">RSS Feed</a>
+          <a class="hover:text-gray-700" href="/feed.rss">RSS<span class="hidden sm:inline"> Feed</span></a>
           <span class="mr-2 ml-2">·</span>
           <a
             class="hover:text-gray-700"
