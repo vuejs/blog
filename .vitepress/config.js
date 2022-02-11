@@ -20,6 +20,14 @@ export default defineConfig({
         type: 'image/x-icon',
         href: '/favicon.ico'
       }
+    ],
+    [
+      'script',
+      {
+        src: 'https://cdn.usefathom.com/script.js',
+        'data-site': 'NYHGSGQV',
+        defer: ''
+      }
     ]
   ],
   vite: {
