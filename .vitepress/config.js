@@ -26,6 +26,7 @@ export default defineConfig({
       {
         src: 'https://cdn.usefathom.com/script.js',
         'data-site': 'NYHGSGQV',
+        'data-spa': 'auto',
         defer: ''
       }
     ]
