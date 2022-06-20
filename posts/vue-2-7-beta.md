@@ -155,7 +155,7 @@ In addition, the following features are explicitly **NOT** ported:
      }
      ```
 
-5. If you were previously using any libraries that rely on [`vue-demi`](https://github.com/vueuse/vue-demi) (e.g. VueUse), you may need to remove lockfile and do a fresh npm install to upgrade to the latest version of `vue-demi`.
+5. If you were previously using any libraries that rely on [`vue-demi`](https://github.com/vueuse/vue-demi) (e.g. VueUse or Pinia), you may need to remove lockfile and do a fresh npm install to upgrade to the latest version of `vue-demi`.
 
 6. The SFC compiler for 2.7 now uses PostCSS 8 (upgraded from 7). PostCSS 8 should be backwards compatible with most plugins, but the upgrade **may** cause issues if you were previously using a custom PostCSS plugin that can only work with PostCSS 7. In such cases, you will need to upgrade the relevant plugins to their PostCSS 8 compatible versions.
 
