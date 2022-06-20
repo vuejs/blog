@@ -1,5 +1,5 @@
 ---
-title: Vue 2.7 is Now in Beta
+title: Vue 2.7 is Now in Beta!
 date: 2022-06-20
 author: Evan You
 gravatar: eca93da2c67aadafe35d477aa8f454b8
@@ -60,12 +60,13 @@ The Composition API is backported using Vue 2's getter/setter-based reactivity s
 
 - Reactivity APIs ignore properties with symbol keys.
 
-Also, the following APIs are explicitly **NOT** ported:
+In addition, the following features are explicitly **NOT** ported:
 
 - ❌ `createApp()` (Vue 2 doesn't have isolated app scope)
 - ❌ Top-level `await` in `<script setup>` (Vue 2 does not support async component initialization)
+- ❌ TypeScript syntax in template expressions (incompatible w/ Vue 2 parser)
 - ❌ Reactivity transform (still experimental)
-- ⚠️ `defineExpose()` is supported in `<script setup>`, but `expose` option is not supported for options components.
+- ❌ `expose` option is not supported for options components (but `defineExpose()` is supported in `<script setup>`).
 
 ## Beta Adoption Guide
 
@@ -80,7 +81,9 @@ Also, the following APIs are explicitly **NOT** ported:
 
 2. Upgrade `vue` to `v2-beta`, or pin to a specific version (latest beta as of this writing is `2.7.0-beta.3`). You can also remove `vue-template-compiler` from the dependencies - it is no longer needed in 2.7.
 
-3. Opt-in to `vue-loader` v15 beta. Since `vue-loader` is a transitive dependency of `@vue/cli-service`, you will need to force your package manager to explicitly use the beta version. The forced resolution will no longer be necessary when it goes stable.
+3. If you were previously using [`@vue/composition-api`](https://github.com/vuejs/composition-api), update imports from it to `vue` instead.
+
+4. Opt-in to `vue-loader` v15 beta. Since `vue-loader` is a transitive dependency of `@vue/cli-service`, you will need to force your package manager to explicitly use the beta version. The forced resolution will no longer be necessary when it goes stable.
 
    - For `npm` (>=8.3.0), use the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) field in `package.json`.
 
@@ -151,6 +154,10 @@ Also, the following APIs are explicitly **NOT** ported:
        }
      }
      ```
+
+5. If you were previously using any libraries that rely on [`vue-demi`](https://github.com/vueuse/vue-demi) (e.g. VueUse), you may need to remove lockfile and do a fresh npm install to upgrade to the latest version of `vue-demi`.
+
+6. The SFC compiler for 2.7 now uses PostCSS 8 (upgraded from 7). PostCSS 8 should be backwards compatible with most plugins, but the upgrade **may** cause issues if you were previously using a custom PostCSS plugin that can only work with PostCSS 7. In such cases, you will need to upgrade the relevant plugins to their PostCSS 8 compatible versions.
 
 ### Vite
 
