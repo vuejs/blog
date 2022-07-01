@@ -10,7 +10,7 @@ twitter: '@youyuxi'
   <img width="300" height="128px" src="https://user-images.githubusercontent.com/499550/176823239-f59d75de-1d24-4b2d-b04b-fcc95db2903e.png" alt="naruto-vue-logo">
 </p>
 
-Today we are happy to announce that Vue 2.7 "Naturo" has been released!
+Today we are happy to announce that Vue 2.7 "Naruto" has been released!
 
 ---
 
