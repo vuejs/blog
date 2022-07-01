@@ -1,12 +1,16 @@
 ---
-title: Vue 2.7 is Now in Beta
-date: 2022-06-20
+title: Vue 2.7 "Naruto" Released
+date: 2022-07-01
 author: Evan You
 gravatar: eca93da2c67aadafe35d477aa8f454b8
 twitter: '@youyuxi'
 ---
 
-We are happy to announce that Vue 2.7 is now in beta.
+<p align="center">
+  <img width="300" height="128px" src="https://user-images.githubusercontent.com/499550/176823239-f59d75de-1d24-4b2d-b04b-fcc95db2903e.png" alt="naruto-vue-logo">
+</p>
+
+Today we are happy to announce that Vue 2.7 "Naturo" has been released!
 
 ---
 
@@ -68,96 +72,29 @@ In addition, the following features are explicitly **NOT** ported:
 - ❌ Reactivity transform (still experimental)
 - ❌ `expose` option is not supported for options components (but `defineExpose()` is supported in `<script setup>`).
 
-## Beta Adoption Guide
+## Upgrade Guide
 
-2.7 is currently in beta stage and may still have rough edges. Please help us test its stability by opting into the beta. Here's how:
+### Vue CLI / webpack
 
-### Vue CLI
-
-1. Upgrade local `@vue/cli-xxx` dependencies the latest version in your major version range:
+1. Upgrade local `@vue/cli-xxx` dependencies the latest version in your major version range (if applicable):
 
    - `~4.5.18` for v4
    - `~5.0.6` for v5
 
-2. Upgrade `vue` to `v2-beta`, or pin to a specific version (latest beta as of this writing is `2.7.0-beta.3`). You can also remove `vue-template-compiler` from the dependencies - it is no longer needed in 2.7.
+2. Upgrade `vue` to `^2.7.0`. You can also remove `vue-template-compiler` from the dependencies - it is no longer needed in 2.7.
 
-3. If you were previously using [`@vue/composition-api`](https://github.com/vuejs/composition-api), update imports from it to `vue` instead.
+   Note: if you are using `@vue/test-utils`, you may need to keep it in the dependencies for now, but this requirement will also be lifted in a new release of test utils.
 
-4. Opt-in to `vue-loader` v15 beta. Since `vue-loader` is a transitive dependency of `@vue/cli-service`, you will need to force your package manager to explicitly use the beta version. The forced resolution will no longer be necessary when it goes stable.
+3. Check your package manager lockfile to ensure the following dependencies meet the version requirements. They may be transitive dependencies not listed in `package.json`.
 
-   - For `npm` (>=8.3.0), use the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) field in `package.json`.
+   - `vue-loader`: `^15.10.0`
+   - `vue-demi`: `^0.13.1`
 
-     If using Vue CLI v4:
+   If not, you will need to remove `node_modules` and the lockfile and perform a fresh install to ensure they are bumped to the latest version.
 
-     ```json
-     {
-       "overrides": {
-         "vue-loader": "^15.10.0-beta.6"
-       }
-     }
-     ```
+4. If you were previously using [`@vue/composition-api`](https://github.com/vuejs/composition-api), update imports from it to `vue` instead. Note that some APIs exported by the plugin, e.g. `createApp`, are not ported in 2.7.
 
-     If using Vue CLI v5:
-
-     ```json
-     {
-       "overrides": {
-         "@vue/vue-loader-v15": "npm:vue-loader@^15.10.0-beta.6"
-       }
-     }
-     ```
-
-   - For `yarn`, use the [resolutions](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/) field in `package.json`.
-
-     If using Vue CLI v4:
-
-     ```json
-     {
-       "resolutions": {
-         "vue-loader": "^15.10.0-beta.6"
-       }
-     }
-     ```
-
-     If using Vue CLI v5:
-
-     ```json
-     {
-       "resolutions": {
-         "@vue/vue-loader-v15": "npm:vue-loader@^15.10.0-beta.6"
-       }
-     }
-     ```
-
-   - For `pnpm`, use [pnpm.overrides](https://pnpm.io/package_json#pnpmoverrides):
-
-     If using Vue CLI v4:
-
-     ```json
-     {
-       "pnpm": {
-         "overrides": {
-           "vue-loader": "^15.10.0-beta.6"
-         }
-       }
-     }
-     ```
-
-     If using Vue CLI v5:
-
-     ```json
-     {
-       "pnpm": {
-         "overrides": {
-           "@vue/vue-loader-v15": "npm:vue-loader@^15.10.0-beta.6"
-         }
-       }
-     }
-     ```
-
-5. If you were previously using any libraries that rely on [`vue-demi`](https://github.com/vueuse/vue-demi) (e.g. VueUse or Pinia), you may need to remove lockfile and do a fresh npm install to upgrade to the latest version of `vue-demi`.
-
-6. The SFC compiler for 2.7 now uses PostCSS 8 (upgraded from 7). PostCSS 8 should be backwards compatible with most plugins, but the upgrade **may** cause issues if you were previously using a custom PostCSS plugin that can only work with PostCSS 7. In such cases, you will need to upgrade the relevant plugins to their PostCSS 8 compatible versions.
+5. The SFC compiler for 2.7 now uses PostCSS 8 (upgraded from 7). PostCSS 8 should be backwards compatible with most plugins, but the upgrade **may** cause issues if you were previously using a custom PostCSS plugin that can only work with PostCSS 7. In such cases, you will need to upgrade the relevant plugins to their PostCSS 8 compatible versions.
 
 ### Vite
 
@@ -180,6 +117,16 @@ Note that the new plugin does not handle Vue-specific JSX / TSX transform, which
 
 ## Implications of the 2.7 Release
 
-2.7 stable is scheduled to land around end of June 2022. As stated before, it will be the final minor release of Vue 2.x. Once 2.7 is released as stable, Vue 2 will no longer receive new features, and will enter LTS (long-term support) which lasts for 18 months.
+As stated before, 2.7 is the final minor release of Vue 2.x. After this release, Vue 2 has entered LTS (long-term support) which lasts for 18 months from now, and will no longer receive new features.
 
 This means **Vue 2 will reach End of Life by the end of 2023**. We believe this should provide plenty of time for most of the ecosystem to migrate over to Vue 3. However, we also understand that there could be teams or projects that cannot upgrade by this timeline while still need to fullfil security and compliance requirements. We are planning to provide extended support for Vue 2 for teams with such needs - if your team expects to be using Vue 2 beyond end of 2023, make sure to plan head and register your interest [here](https://airtable.com/shrj37Zf4ZIfrxFzh).
+
+## Extra Details
+
+In preparation of this release, we ported the Vue 2 codebase from Flow to TypeScript, building upon the heroic effort by core team member [@pikax](https://github.com/pikax). This made it much easier for us to reuse code from Vue 3, and auto-generate type definitions for the ported APIs. We also moved the unit tests from Karma + Jasmine to [Vitest](https://vitest.dev/), resulting in greatly improved maintenance DX and CI stability.
+
+We would also like to express our appreciation towards prior community efforts that bridged the gap before 2.7 was available:
+
+- `@vue/composition-api` plugin by [@liximomo](https://github.com/liximomo)
+- `vue-demi` by [@antfu](https://github.com/antfu)
+- `vite-plugin-vue2` by [@underfin](https://github.com/underfin)
