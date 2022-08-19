@@ -1,14 +1,18 @@
-const fs = require('fs')
-const path = require('path')
-const matter = require('gray-matter')
-const { createMarkdownRenderer } = require('vitepress')
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { createMarkdownRenderer } from 'vitepress'
+import { fileURLToPath } from 'url'
 
-const md = createMarkdownRenderer(process.cwd())
+let md
 
-module.exports = {
+const dirname = path.dirname(fileURLToPath(import.meta.url))
+
+export default {
   watch: '../posts/*.md',
-  load(asFeed = false) {
-    const postDir = path.resolve(__dirname, '../posts')
+  async load(asFeed = false) {
+    md = md || (await createMarkdownRenderer(process.cwd()))
+    const postDir = path.resolve(dirname, '../posts')
     return fs
       .readdirSync(postDir)
       .map((file) => getPost(file, postDir, asFeed))
