@@ -5,16 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build && node ./.vitepress/genFeed",
+    "build": "vitepress build && tsx ./.vitepress/genFeed",
     "serve": "vitepress serve"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.4",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^18.7.13",
     "feed": "^4.2.1",
     "gray-matter": "^4.0.2",
-    "vitepress": "^1.0.0-alpha.8"
-  },
-  "dependencies": {
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "tsx": "^3.8.2",
+    "vitepress": "^1.0.0-alpha.10",
+    "vue": "^3.2.37"
   }
 }

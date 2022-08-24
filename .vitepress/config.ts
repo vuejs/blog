@@ -30,10 +30,5 @@ export default defineConfig({
         defer: ''
       }
     ]
-  ],
-  vite: {
-    build: {
-      // minify: 'terser'
-    }
-  }
+  ]
 })

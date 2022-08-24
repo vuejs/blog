@@ -1,8 +1,8 @@
-import fs from 'fs'
 import path from 'path'
+import { readFileSync, writeFileSync } from 'fs'
 import { Feed } from 'feed'
-import postsData from './posts.data.js'
 import { fileURLToPath } from 'url'
+import postsData from './theme/posts.data.js'
 
 const url = `https://blog.vuejs.org`
 const dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -21,10 +21,14 @@ const feed = new Feed({
 postsData.load(true).then((posts) => {
   posts.forEach((post) => {
     const file = path.resolve(dirname, `dist${post.href}`)
-    const rendered = fs.readFileSync(file, 'utf-8')
+    const rendered = readFileSync(file, 'utf-8')
     const content = rendered.match(
       /<div [^<>]+?class="prose[^<>]+?>([\s\S]*)<\/div><\/div><footer/
     )
+
+    if (!content) {
+      throw new Error(`no content match found for file ${post.href}`)
+    }
 
     feed.addItem({
       title: post.title,
@@ -44,5 +48,5 @@ postsData.load(true).then((posts) => {
     })
   })
 
-  fs.writeFileSync(path.resolve(dirname, 'dist/feed.rss'), feed.rss2())
+  writeFileSync(path.resolve(dirname, 'dist/feed.rss'), feed.rss2())
 })
