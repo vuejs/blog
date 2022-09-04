@@ -4,11 +4,13 @@ import { useRoute } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
 import Tagged from './Tagged.vue'
+import Archive from './Archive.vue'
 import NotFound from './NotFound.vue'
 
 const route = useRoute()
 const isIndex = computed(() => route.path.replace(/index.html$/, '') === '/')
 const isTagged = computed(() => route.path.replace(/tags\/.+.html$/, '') === '/')
+const isArchive = computed(() => route.path.replace(/archive.html$/, '') === '/')
 const isNotFound = computed(() => route.component === NotFound)
 </script>
 
@@ -50,6 +52,7 @@ const isNotFound = computed(() => route.component === NotFound)
     </div>
     <main class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
       <Home v-if="isIndex" />
+      <Archive v-else-if="isArchive" />
       <Tagged v-else-if="isTagged" :path="route.path" />
       <NotFound v-else-if="isNotFound" />
       <Article v-else />
