@@ -15,6 +15,7 @@ export interface Post {
     time: number
     string: string
   }
+  tags: object
   excerpt: string | undefined
   data?: Record<string, any>
 }
@@ -59,6 +60,7 @@ function getPost(file: string, postDir: string, asFeed = false): Post {
     title: data.title,
     href: `/posts/${file.replace(/\.md$/, '.html')}`,
     date: formatDate(data.date),
+    tags: data.tags,
     excerpt: excerpt && md.render(excerpt)
   }
   if (asFeed) {

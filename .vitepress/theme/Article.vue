@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Date from './Date.vue'
 import Author from './Author.vue'
+import Tags from './Tags.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import { data as posts } from './posts.data.js'
@@ -63,6 +64,12 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           xl:col-start-1 xl:row-start-2
         "
       >
+        <div class="py-8" v-if="data.tags">
+          <h2 class="text-xs tracking-wide uppercase text-gray-500">
+            Tags
+          </h2>
+          <Tags />
+        </div>
         <div v-if="nextPost" class="py-8">
           <h2 class="text-xs tracking-wide uppercase text-gray-500">
             Next Article
