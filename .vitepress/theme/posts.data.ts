@@ -15,7 +15,7 @@ export interface Post {
     time: number
     string: string
   }
-  tags: object
+  tags: Array<string>
   excerpt: string | undefined
   data?: Record<string, any>
 }

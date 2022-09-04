@@ -19,11 +19,13 @@
     // Get tagged posts
     var taggedPosts:any = [];
     for (let post of posts) {
-        if (post.tags && post.tags.includes(taggedSlug)) { taggedPosts.push(post) }
+        if (post.tags && post.tags.includes(taggedSlug || "")) {
+            taggedPosts.push(post)
+        }
     }
 
     // Update <title>
-    if (taggedPosts > 0) {
+    if (taggedPosts.length > 0) {
         route.data.title = (taggedSlug || "")
     }
     </script>
