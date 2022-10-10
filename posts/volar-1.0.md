@@ -24,7 +24,7 @@ There are so many updates that you most likely missed some. Below we have summar
 - Implemented [Component Preview](https://github.com/johnsoncodehk/volar/discussions/1511)
 - Added setting `format.initialIndent` to specify the initial indent of SFC blocks
 - Implemented support for Web IDE
-- No longer built-in support for `<template lang="pug">` (In v1.0 you need to install [@volar/vue-language-plugin-pug](https://www.npmjs.com/package/@volar/ vue-language-plugin-pug))
+- No longer built-in support for `<template lang="pug">` (In v1.0 you need to install [@volar/vue-language-plugin-pug](https://www.npmjs.com/package/@volar/vue-language-plugin-pug))
 
 ### Out-of-the-Box Usage Improvements
 
