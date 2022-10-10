@@ -112,11 +112,11 @@ Thank you for reading this blog. 🙌
 
 很高興宣布在今天完成了所有主要功能並發佈了v1.0版本。🎉
 
-這個主要版本全方面改進了工具，除了改進 UX、性能、包大小，我們還發佈了 Plugin API v1，以及將項目重構為與框架無關的工具。
+這個主要版本全方面改進了工具，除了改進 UX、性能、包大小，我們還發佈了 Plugin API v1，以及重構了架構使核心代碼與框架無關。
 
-今年初我與 Vue 的作者 Evan 達成協議，他在 3 月開始資助我全職開發 Volar 直至完成 1.0 版本，經過7個月的努力我們終於做到這點！
+今年初我與 Vue 的作者 Evan 達成協議，他在 3 月開始資助我全職開發 Volar 直至完成 1.0 版本，經過7個月的努力我們終於做到了這個目標！
 
-如果你沒有追蹤每個版本的 changelog，你可能不知道發生了什麼，我會簡單總結在這半年間可能對你有影響，相對較主要的更改：
+如果你沒有追蹤每個版本的 changelog，你可能不知道發生了什麼，我會簡單總結在這半年間對你較有明顯影響的更改：
 
 ### 功能更新
 
@@ -166,29 +166,33 @@ Thank you for reading this blog. 🙌
 
 ### 通用的 Language Server 框架
 
-Volar 的核心代碼現在與框架無關，你可以使用 Volar 為 Vue 以外的語言實現語言服務器。我們有一個[Svelte Language Server 例子](https://github.com/johnsoncodehk/volar/tree/master/examples/svelte)。
+Volar 的核心代碼現在與框架無關，你可以使用 Volar 為 Vue 以外的語言實現語言服務器。
+
+在 repo 的 [examples 目錄](https://github.com/johnsoncodehk/volar/tree/master/examples)，我們基於 `svelte2tsx` 分別實現了 `svelte-tsc`, `svelte-langauge-server` 等等示例。
+
+目錄中還有一個 `vue-and-svelte-language-server` 示例，在單個 Language Server 同時支持 Vue 和 Svelte，避免多個 Language Server 建立分別建立昂貴的 TypeScript LanguageService 實例，對於像 Astro 同時支持多個前端框架的項目可能很有用。
 
 ### VueLanguagePlugin API
 
 現在支持 `vueCompilerOptions.plugins` 選項指定額外 plugin 來更改 virtual code 的生成方式。
 
-VueLanguagePlugin的 codegen API 使用 `muggle-string` 而不是 `magic-string`，`muggle-string` 仍然是早期版本缺乏主要功能，但是與 Volar 解耦因此可以獨立發展，如果你需要使用請關注 https://github.com/johnsoncodehk/muggle-string 更新。
+VueLanguagePlugin 的 codegen API 使用 `muggle-string` 而不是 `magic-string`，`muggle-string` 仍然是早期版本缺乏主要功能，但是與 Volar 解耦因此可以獨立發展，如果你需要開發 `VueLanguagePlugin` 請關注 https://github.com/johnsoncodehk/muggle-string 更新。
 
 ### LanguageServicePlugin API
 
 你可以在 `volar.config.js` 添加 plugin 來更改 language server 的行為，例如將 `<template>` 使用的 formatter 改為 Prettier。
 
-我們有一個 repo 用來維護常用的 plugins: https://github.com/johnsoncodehk/volar-plugins
+我們有一個單獨的 repo 用來維護常用的 plugins: https://github.com/johnsoncodehk/volar-plugins
 
 ### 外部工具支持
 
-- `@volar/vue-typescript` 公開了 organizeImports API，因此 `prettier-plugin-organize-imports` 可以使用它
-- 為 VSCode 以外的 Vue Language Client 從 `@volar/vue-language-core` 公開了 `vue-tsconfig.schema.json` 檔案
-- 實現了 `vue-component-meta` 用於 UI Librarys docgen
+- `@volar/vue-typescript` 為 `prettier-plugin-organize-imports` 公開了 organizeImports API
+- `@volar/vue-language-core` 為VSCode以外的IDE公開了 `vue-tsconfig.schema.json`
+- 實現了 `vue-component-meta` 用於UI Library文檔生成
 
 ## What's Next
 
-Volar 至今開發了兩年多時間，我有點自豪因為我幾乎做到了所有承諾。對於原本只是一個 VSCode Plugin 來說投入的開發成本是巨大的，同時它的項目 scope 也可能嚇怕一些原本打算為語言實現 Tooling 的人，因此我希望在 v2.0 改進核心框架，讓其他需要實現 Tooling 的語言更容易地利用 Volar 所做的努力。
+Volar 至今開發了兩年多時間，對於原本只是一個 VSCode Plugin 來說投入的開發成本是巨大的，同時它的項目 scope 也可能嚇怕一些原本打算為語言實現 Tooling 的人，因此我希望在 v2.0 改進核心框架，讓其他需要實現 Tooling 的語言更容易地利用 Volar 所做的努力。
 
 此外還有一些計劃做的事情：
 
