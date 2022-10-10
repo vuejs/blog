@@ -106,7 +106,7 @@ In addition there are some other things planned to do:
 
 After v1.0 is released I will go back to working full time and starting some other personal projects, while continuing to work on these in my spare time.
 
-I want to give a big shout out to [NuxtLabs](https://nuxtjs.org/) who have been Platinum Sponsor since May and all my sponsors 🙌, which largely guarantees that I will be able to continue maintaining Volar after 1.0 to improve your Vue development experience!
+I also want to give a big shout out to [NuxtLabs](https://nuxtjs.org/), who have been Platinum Sponsor since May, and all my other sponsors 🙌. Your support ensures that I will be able to continue maintaining Volar after 1.0 to improve your Vue development experience!
 
 <p align="center">
 	<a href="https://cdn.jsdelivr.net/gh/johnsoncodehk/sponsors/sponsors.svg">
