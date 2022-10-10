@@ -186,9 +186,9 @@ VueLanguagePlugin 的 codegen API 使用 `muggle-string` 而不是 `magic-string
 
 ### 外部工具支持
 
-- `@volar/vue-typescript`為`prettier-plugin-organize-imports`公開了organizeImports API
-- `@volar/vue-language-core`為VSCode以外的IDE公開了`vue-tsconfig.schema.json`
-- 實現了`vue-component-meta`用於UI Library文檔生成
+- `@volar/vue-typescript` 為 `prettier-plugin-organize-imports` 公開了organizeImports API
+- `@volar/vue-language-core` 為VSCode以外的IDE公開了 `vue-tsconfig.schema.json`
+- 實現了 `vue-component-meta` 用於UI Library文檔生成
 
 ## What's Next
 
