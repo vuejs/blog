@@ -5,7 +5,7 @@ const { frontmatter } = useData()
 </script>
 
 <template>
-  <dl class="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200">
+  <dl class="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 dark:xl:border-slate-200/5">
     <dt class="sr-only">Authors</dt>
     <dd>
       <ul
@@ -26,7 +26,7 @@ const { frontmatter } = useData()
           />
           <dl class="text-sm font-medium leading-5 whitespace-nowrap">
             <dt class="sr-only">Name</dt>
-            <dd class="text-gray-900">{{ frontmatter.author }}</dd>
+            <dd class="text-gray-900 dark:text-white">{{ frontmatter.author }}</dd>
             <dt v-if="frontmatter.twitter" class="sr-only">Twitter</dt>
             <dd v-if="frontmatter.twitter">
               <a
