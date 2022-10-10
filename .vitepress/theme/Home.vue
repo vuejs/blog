@@ -1,6 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import Date from './Date.vue'
-import { data as posts } from '../posts.data'
+import { data as posts } from './posts.data.js'
+import { useData } from 'vitepress'
+
+const { frontmatter } = useData()
 </script>
 
 <template>
@@ -17,17 +20,14 @@ import { data as posts } from '../posts.data'
           md:text-6xl md:leading-14
         "
       >
-        {{ $frontmatter.title }}
+        {{ frontmatter.title }}
       </h1>
       <p class="text-lg leading-7 text-gray-500 dark:text-white">{{ $frontmatter.subtext }}</p>
     </div>
     <ul class="divide-y divide-gray-200 dark:divide-slate-200/5">
       <li class="py-12" v-for="{ title, href, date, excerpt } of posts">
         <article
-          class="
-            space-y-2
-            xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline
-          "
+          class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline"
         >
           <Date :date="date" />
           <div class="space-y-5 xl:col-span-3">

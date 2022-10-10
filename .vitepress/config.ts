@@ -20,11 +20,15 @@ export default defineConfig({
         type: 'image/x-icon',
         href: '/favicon.ico'
       }
+    ],
+    [
+      'script',
+      {
+        src: 'https://cdn.usefathom.com/script.js',
+        'data-site': 'NYHGSGQV',
+        'data-spa': 'auto',
+        defer: ''
+      }
     ]
-  ],
-  vite: {
-    build: {
-      minify: 'terser'
-    }
-  }
+  ]
 })

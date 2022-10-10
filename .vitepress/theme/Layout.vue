@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vitepress'
+import Home from './Home.vue'
+import Article from './Article.vue'
+import NotFound from './NotFound.vue'
+
+const route = useRoute()
+const isIndex = computed(() => route.path.replace(/index.html$/, '') === '/')
+const isNotFound = computed(() => route.component === NotFound)
+</script>
+
 <template>
   <div class="antialiased dark:bg-slate-900">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
@@ -20,7 +32,9 @@
             ><span class="hidden sm:inline">GitHub </span>Source</a
           >
           <span class="mr-2 ml-2">·</span>
-          <a class="hover:text-gray-700 dark:hover:text-gray-200" href="/feed.rss">RSS<span class="hidden sm:inline"> Feed</span></a>
+          <a class="hover:text-gray-700 dark:hover:text-gray-200" href="/feed.rss"
+            >RSS<span class="hidden sm:inline"> Feed</span></a
+          >
           <span class="mr-2 ml-2">·</span>
           <a
             class="hover:text-gray-700 dark:hover:text-gray-200"
@@ -34,17 +48,8 @@
     </div>
     <main class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
       <Home v-if="isIndex" />
+      <NotFound v-else-if="isNotFound" />
       <Article v-else />
     </main>
   </div>
 </template>
-
-<script setup>
-import { computed } from 'vue'
-import { useRoute } from 'vitepress'
-import Home from './Home.vue'
-import Article from './Article.vue'
-
-const route = useRoute()
-const isIndex = computed(() => route.path.replace(/index.html$/, '') === '/')
-</script>
