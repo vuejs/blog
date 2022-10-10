@@ -109,6 +109,7 @@ After v1.0 is released I will go back to working full time and starting some oth
 Thank you for reading this blog. 🙌
 
 ---
+
 很高興宣布在今天完成了所有主要功能並發佈了v1.0版本。🎉
 
 這個主要版本全方面改進了工具，除了改進 UX、性能、包大小，我們還發佈了 Plugin API v1，以及重構了架構使核心代碼與框架無關。
