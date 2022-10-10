@@ -106,7 +106,15 @@ In addition there are some other things planned to do:
 
 After v1.0 is released I will go back to working full time and starting some other personal projects, while continuing to work on these in my spare time.
 
-Thank you for reading this blog. 🙌
+I want to give a big shout out to [NuxtLabs](https://nuxtjs.org/) who have been Platinum Sponsor since May and all my sponsors 🙌, which largely guarantees that I will be able to continue maintaining Volar after 1.0 to improve your Vue development experience!
+
+<p align="center">
+	<a href="https://cdn.jsdelivr.net/gh/johnsoncodehk/sponsors/sponsors.svg">
+		<img src="https://cdn.jsdelivr.net/gh/johnsoncodehk/sponsors/sponsors.svg"/>
+	</a>
+</p>
+
+Thank you for reading this blog!
 
 ---
 
@@ -205,4 +213,12 @@ Volar 至今開發了兩年多時間，對於原本只是一個 VSCode Plugin �
 
 發佈v1.0之後我將會回到全職工作和開始一些其他個人項目，同時在業餘時間繼續做這些工作。
 
-感謝你閱讀這篇文章！ 🙌
+我想為從五月開始成為 Platinum Sponsor 的 [NuxtLabs](https://nuxtjs.org/) 以及所有贊助者大聲呼喊 🙌，這很大程度地保證了我在完成 1.0 之後仍然能夠繼續維護 Volar 以改善你的 Vue 開發體驗！
+
+<p align="center">
+	<a href="https://cdn.jsdelivr.net/gh/johnsoncodehk/sponsors/sponsors.svg">
+		<img src="https://cdn.jsdelivr.net/gh/johnsoncodehk/sponsors/sponsors.svg"/>
+	</a>
+</p>
+
+感謝你閱讀這篇文章！
