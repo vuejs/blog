@@ -83,7 +83,7 @@ In addition, the following features are explicitly **NOT** ported:
 
 2. Upgrade `vue` to `^2.7.0`. You can also remove `vue-template-compiler` from the dependencies - it is no longer needed in 2.7.
 
-   Note: if you are using `@vue/test-utils`, you may need to keep it in the dependencies for now, but this requirement will also be lifted in a new release of test utils.
+   Note: if you are using `@vue/test-utils`, you will need to keep `vue-template-compiler` in the dependencies because test utils rely on some APIs only exposed in this package.
 
 3. Check your package manager lockfile to ensure the following dependencies meet the version requirements. They may be transitive dependencies not listed in `package.json`.
 
@@ -102,7 +102,7 @@ In addition, the following features are explicitly **NOT** ported:
 
 2.7 support for Vite is provided via a new plugin: [@vitejs/plugin-vue2](https://github.com/vitejs/vite-plugin-vue2). This new plugin requires Vue 2.7 or above and supersedes the existing [vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2).
 
-Note that the new plugin does not handle Vue-specific JSX / TSX transform, which is intentional. Vue 2 JSX / TSX transform should be handled in a separate, dedicated plugin, which will be provided soon.
+Note that the new plugin does not handle Vue-specific JSX / TSX transform, which is intentional. Vue 2 JSX / TSX transform for Vite is handled in a separate, dedicated plugin: [@vitejs/plugin-vue2-jsx](https://github.com/vitejs/vite-plugin-vue2-jsx).
 
 ### Volar Compatibility
 
