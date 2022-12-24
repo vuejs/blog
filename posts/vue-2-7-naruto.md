@@ -123,9 +123,9 @@ Vue Devtools 6.2.0 has added support for inspecting 2.7 Composition API state, b
 
 ## Implications of the 2.7 Release
 
-As stated before, 2.7 is the final minor release of Vue 2.x. After this release, Vue 2 has entered LTS (long-term support) which lasts for 18 months from now, and will no longer receive new features.
+As stated before, 2.7 is the final minor release of Vue 2.x. After this release, Vue 2 has entered LTS (long-term support) which lasts for 18 months from now, and will no longer receive new features. This means **Vue 2 will reach End of Life on December 31st, 2023**.
 
-This means **Vue 2 will reach End of Life by the end of 2023**. We believe this should provide plenty of time for most of the ecosystem to migrate over to Vue 3. However, we also understand that there could be teams or projects that cannot upgrade by this timeline while still need to fullfil security and compliance requirements. We are planning to provide extended support for Vue 2 for teams with such needs - if your team expects to be using Vue 2 beyond end of 2023, make sure to plan head and register your interest [here](https://airtable.com/shrj37Zf4ZIfrxFzh).
+We believe this should provide plenty of time for most of the ecosystem to migrate over to Vue 3. However, we also understand that there could be teams or projects that cannot upgrade by this timeline while still needing to fulfill security and compliance requirements. We are partnering with industry experts to provide extended support for Vue 2 for teams with such needs - if your team expects to be using Vue 2 beyond the end of 2023, make sure to plan ahead and learn more about [Vue 2 Extended LTS](https://v2.vuejs.org/lts/).
 
 ## Extra Details
 
