@@ -1,4 +1,11 @@
+import { createWriteStream } from 'node:fs'
 import { defineConfig } from 'vitepress'
+import { SitemapStream } from 'sitemap'
+import { resolve } from 'node:path'
+
+const links: string[] = []
+
+const hostname = 'https://blog.vuejs.org/'
 
 export default defineConfig({
   title: 'The Vue Point',
@@ -30,5 +37,19 @@ export default defineConfig({
         defer: ''
       }
     ]
-  ]
+  ],
+  transformHtml: (_, id, { pageData }) => {
+    if (!/[\\/]404\.html$/.test(id))
+      links.push(pageData.relativePath.replace(/\.md$/, '.html'))
+  },
+  buildEnd: async ({ outDir }) => {
+    const sitemap = new SitemapStream({
+      hostname
+    })
+    const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+    sitemap.pipe(writeStream)
+    links.forEach((link) => sitemap.write(link))
+    sitemap.end()
+    await new Promise((r) => writeStream.on('finish', r))
+  }
 })
