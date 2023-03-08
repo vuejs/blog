@@ -26,9 +26,9 @@ interface PostWithData extends Post {
 declare const data: Post[]
 export { data }
 
-async function load(): Promise<Post[]>
-async function load(asFeed: boolean): Promise<PostWithData[]>
-async function load(asFeed = false) {
+export async function load(): Promise<Post[]>
+export async function load(asFeed: boolean): Promise<PostWithData[]>
+export async function load(asFeed = false) {
   md = md || (await createMarkdownRenderer(process.cwd()))
   return fs
     .readdirSync(postDir)
@@ -38,7 +38,9 @@ async function load(asFeed = false) {
 
 export default {
   watch: path.join(postDir, '*.md'),
-  load
+  load() {
+    return load()
+  }
 }
 
 const cache = new Map()

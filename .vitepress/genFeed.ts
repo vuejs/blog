@@ -2,7 +2,7 @@ import path from 'path'
 import { readFileSync, writeFileSync } from 'fs'
 import { Feed } from 'feed'
 import { fileURLToPath } from 'url'
-import postsData from './theme/posts.data.js'
+import { load } from './theme/posts.data.js'
 
 const url = `https://blog.vuejs.org`
 const dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -18,7 +18,7 @@ const feed = new Feed({
   copyright: 'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
 })
 
-postsData.load(true).then((posts) => {
+load(true).then((posts) => {
   posts.forEach((post) => {
     const file = path.resolve(dirname, `dist${post.href}`)
     const rendered = readFileSync(file, 'utf-8')
