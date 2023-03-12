@@ -20,7 +20,7 @@ const feed = new Feed({
 
 load(true).then((posts) => {
   posts.forEach((post) => {
-    const file = path.resolve(dirname, `dist${post.href}`)
+    const file = path.resolve(dirname, `dist${post.href}.html`)
     const rendered = readFileSync(file, 'utf-8')
     const content = rendered.match(
       /<div [^<>]+?class="prose[^<>]+?>([\s\S]*)<\/div><\/div><footer/
