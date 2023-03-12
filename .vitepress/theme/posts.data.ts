@@ -59,7 +59,7 @@ function getPost(file: string, postDir: string, asFeed = false): Post {
 
   const post: Post = {
     title: data.title,
-    href: `/posts/${file.replace(/\.md$/, '.html')}`,
+    href: `/posts/${file.replace(/\.md$/, '')}`,
     date: formatDate(data.date),
     excerpt: excerpt && md.render(excerpt)
   }
