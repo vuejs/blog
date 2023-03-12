@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { genFeed } from './genFeed.js'
 
 export default defineConfig({
   title: 'The Vue Point',
@@ -31,5 +32,6 @@ export default defineConfig({
         defer: ''
       }
     ]
-  ]
+  ],
+  buildEnd: genFeed
 })
