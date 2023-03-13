@@ -1,53 +1,52 @@
 import path from 'path'
-import { readFileSync, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { Feed } from 'feed'
-import { fileURLToPath } from 'url'
-import { load } from './theme/posts.data.js'
+import { createContentLoader, type SiteConfig } from 'vitepress'
 
-const url = `https://blog.vuejs.org`
-const dirname = path.dirname(fileURLToPath(import.meta.url))
+const baseUrl = `https://blog.vuejs.org`
 
-export async function genFeed() {
+export async function genFeed(config: SiteConfig) {
   const feed = new Feed({
     title: 'The Vue Point',
     description: 'The official blog for the Vue.js project',
-    id: url,
-    link: url,
+    id: baseUrl,
+    link: baseUrl,
     language: 'en',
     image: 'https://vuejs.org/images/logo.png',
-    favicon: `${url}/favicon.ico`,
+    favicon: `${baseUrl}/favicon.ico`,
     copyright:
       'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
   })
 
-  for (const post of await load(true)) {
-    const file = path.resolve(dirname, `dist${post.href}.html`)
-    const rendered = readFileSync(file, 'utf-8')
-    const content = rendered.match(
-      /<div [^<>]+?class="prose[^<>]+?>([\s\S]*)<\/div><\/div><footer/
-    )
+  const posts = await createContentLoader('posts/*.md', {
+    excerpt: true,
+    render: true
+  }).load()
 
-    if (!content) {
-      throw new Error(`no content match found for file ${post.href}`)
-    }
+  posts.sort(
+    (a, b) =>
+      +new Date(b.frontmatter.date as string) -
+      +new Date(a.frontmatter.date as string)
+  )
 
+  for (const { url, excerpt, frontmatter, html } of posts) {
     feed.addItem({
-      title: post.title,
-      id: `${url}${post.href}`,
-      link: `${url}${post.href}`,
-      description: post.excerpt,
-      content: content[1],
+      title: frontmatter.title,
+      id: `${baseUrl}${url}`,
+      link: `${baseUrl}${url}`,
+      description: excerpt,
+      content: html,
       author: [
         {
-          name: post.data.author,
-          link: post.data.twitter
-            ? `https://twitter.com/${post.data.twitter}`
+          name: frontmatter.author,
+          link: frontmatter.twitter
+            ? `https://twitter.com/${frontmatter.twitter}`
             : undefined
         }
       ],
-      date: post.data.date
+      date: frontmatter.date
     })
   }
 
-  writeFileSync(path.resolve(dirname, 'dist/feed.rss'), feed.rss2())
+  writeFileSync(path.join(config.outDir, 'feed.rss'), feed.rss2())
 }
