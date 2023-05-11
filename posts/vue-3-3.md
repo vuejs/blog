@@ -1,6 +1,6 @@
 ---
 title: Announcing Vue 3.3
-date: 2023-05-08
+date: 2023-05-11
 author: Evan You
 gravatar: eca93da2c67aadafe35d477aa8f454b8
 twitter: '@youyuxi'
