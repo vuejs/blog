@@ -46,7 +46,7 @@ Vapor Mode is an alternative compilation strategy that we have been experimentin
 
 - Vapor Mode is intended for use cases where performance is the primary concern. It is opt-in and does not affect existing codebases.
 
-- At the very least, you will be able to embed a Vapor component subtree into any existing Vue 3 app. Ideally, we hope to achieve granular opt-in at the component level, which means freely mixing Vapor and non-Vapor components int the same app.
+- At the very least, you will be able to embed a Vapor component subtree into any existing Vue 3 app. Ideally, we hope to achieve granular opt-in at the component level, which means freely mixing Vapor and non-Vapor components in the same app.
 
 - Building an app with only Vapor components allows you to drop the Virtual DOM runtime from the bundle, significantly reducing the baseline runtime size.
 
