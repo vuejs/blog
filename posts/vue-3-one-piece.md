@@ -63,7 +63,7 @@ We have also implemented a currently undocumented `<Suspense>` component, which 
 
 The release of Vue 3.0 marks the general readiness of the framework. While some of the frameworks sub projects may still need further work to reach stable status (specifically router and Vuex integration in the devtools), we believe it's suitable to start new, green-field projects with Vue 3 today. We also encourage library authors to start upgrading your projects to support Vue 3.
 
-Check out the [Vue 3 Libraries Guide](https://v3.vuejs.org/guide/migration/introduction.html#supporting-libraries) for details on all framework sub projects.
+Check out the [Vue 3 Libraries Guide](https://v3-migration.vuejs.org/recommendations.html) for details on all framework sub projects.
 
 ### Migration and IE11 Support
 
