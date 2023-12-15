@@ -26,6 +26,8 @@ As we approach this date, the Vue community should prepare for the deprecation o
 
 **After December 31, 2023, Vue 2 will no longer receive new features, updates, or fixes, though it will still be available on all existing distribution channels (CDNs, package managers, Github, etc).**
 
+In other words, your applications will continue to work, but you will get deprecation warnings from your package mananger reminding you that Vue 2 is no longer a supported version.
+
 ## What’s Next
 
 Vue 3 has been the default version of Vue since February 7, 2022. Users who have migrated have enjoyed:
