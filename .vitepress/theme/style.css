@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.vp-code span {
+  color: var(--shiki-dark, inherit);
+}
+
 :root {
   --c-brand: #3eaf7c;
   --c-brand-light: #4abf8a;
@@ -29,6 +33,18 @@ p img {
 
 .header-anchor {
   display: none;
+}
+
+h3 .header-anchor {
+  display: inline-block;
+  position: absolute;
+  left: -1em;
+  text-decoration: none;
+  color: var(--c-brand);
+}
+
+h3 .header-anchor:before {
+  content: '#';
 }
 
 /**
@@ -148,4 +164,25 @@ span.lang {
 }
 .custom-block.tip:before {
   color: #42b883;
+}
+
+.prose :where(:not(pre)>code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  color: #0a3760;
+  padding: 0.25em 0.4em;
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.prose
+  :where(code):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::before {
+  content: '' !important;
+}
+
+.prose
+  :where(code):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  )::after {
+  content: '' !important;
 }
