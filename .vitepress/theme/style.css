@@ -166,7 +166,10 @@ span.lang {
   color: #42b883;
 }
 
-.prose :where(:not(pre)>code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+.prose
+  :where(:not(pre) > code):not(
+    :where([class~='not-prose'], [class~='not-prose'] *)
+  ) {
   color: #0a3760;
   padding: 0.25em 0.4em;
   border-radius: 4px;
@@ -185,4 +188,14 @@ span.lang {
     :where([class~='not-prose'], [class~='not-prose'] *)
   )::after {
   content: '' !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .prose
+    :where(:not(pre) > code):not(
+      :where([class~='not-prose'], [class~='not-prose'] *)
+    ) {
+    color: #d1e9ff;
+    background-color: #3c3a5b;
+  }
 }
