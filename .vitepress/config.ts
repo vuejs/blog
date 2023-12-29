@@ -3,7 +3,7 @@ import { genFeed } from './genFeed.js'
 
 export default defineConfig({
   title: 'The Vue Point',
-  description: 'The offical blog for the Vue.js project',
+  description: 'The official blog for the Vue.js project',
   cleanUrls: true,
   head: [
     ['meta', { name: 'twitter:site', content: '@vuejs' }],
