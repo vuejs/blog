@@ -26,7 +26,7 @@ This post provides an overview of the highlighted features in 3.4. For the full 
    - nuxt@^3.9.0 (if using Nuxt)
    - vue-loader@^17.4.0 (if using webpack or vue-cli)
 
-2. If using TSX with Vue, check actions needed in [Removed: Global JSX Namespace](#removed-global-jsx-namespace).
+2. If using TSX with Vue, check actions needed in [Removed: Global JSX Namespace](#global-jsx-namespace).
 
 3. Make sure you are no longer using any deprecated features (if you are, you should have warnings in the console telling you so). They may have been [removed in 3.4](#other-removed-features).
 
