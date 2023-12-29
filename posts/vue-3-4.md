@@ -91,7 +91,7 @@ You can now shorten this:
 To this:
 
 ```vue-html
-<div :id :src :alt>
+<img :id :src :alt>
 ```
 
 This feature has been frequently requested in the past. Originally, we had concerns about its usage being confused with boolean attributes. However, after revisiting the feature, we now think it makes sense for `v-bind` to behave a bit more like JavaScript than native attributes, considering its dynamic nature.
