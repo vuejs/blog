@@ -6,6 +6,8 @@ gravatar: eca93da2c67aadafe35d477aa8f454b8
 twitter: '@youyuxi'
 ---
 
+<img src="https://vitepress.dev/vitepress-logo-large.webp" alt="vitepress logo"  style="width:256px; margin:2em auto;">
+
 Today we are happy to announce the (long overdue) 1.0 release of [VitePress](https://vitepress.dev/)!
 
 VitePress is a Static Site Generator (SSG) designed for building fast, content-centric websites. In a nutshell, VitePress takes your source content written in Markdown, applies a theme to it, and generates static HTML pages that can be easily deployed anywhere.
