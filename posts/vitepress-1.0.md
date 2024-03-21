@@ -10,7 +10,7 @@ Today we are happy to announce the (long overdue) 1.0 release of [VitePress](htt
 
 VitePress is a Static Site Generator (SSG) designed for building fast, content-centric websites. In a nutshell, VitePress takes your source content written in Markdown, applies a theme to it, and generates static HTML pages that can be easily deployed anywhere.
 
-VitePress is built on top of [Vite](https://vitejs.dev/) and [Vue](https://vuejs.org/), and is the spiritual successor and modern replacement of [VuePress](vuepress.vuejs.org).
+VitePress is built on top of [Vite](https://vitejs.dev/) and [Vue](https://vuejs.org/), and is the spiritual successor and modern replacement of [VuePress](https://vuepress.vuejs.org).
 
 ---
 
