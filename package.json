@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vitepress --open",
     "build": "vitepress build",
-    "serve": "vitepress serve"
+    "serve": "vitepress serve",
+    "preview": "vitepress preview"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
