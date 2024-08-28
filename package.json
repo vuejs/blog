@@ -9,18 +9,14 @@
     "serve": "vitepress serve"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.14",
     "@types/markdown-it": "^12.2.3",
     "@types/node": "^20.11.27",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
-    "tailwindcss": "^3.4.1",
-    "vitepress": "^1.0.0",
-    "vue": "^3.4.21"
+    "tailwindcss": "^3.4.10",
+    "vitepress": "^1.3.4",
+    "vue": "^3.5.0-beta.3"
   },
-  "pnpm": {
-    "overrides": {
-      "@vitejs/plugin-vue": "5.0.0-beta.1"
-    }
-  }
+  "packageManager": "pnpm@9.8.0"
 }
