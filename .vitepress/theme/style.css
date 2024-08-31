@@ -199,3 +199,9 @@ span.lang {
     background-color: #3c3a5b;
   }
 }
+
+@media (max-width: 518px) {
+  .prose img {
+    max-width: 100% !important;
+  }
+}

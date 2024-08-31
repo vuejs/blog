@@ -95,7 +95,7 @@ The core API is intentionally lower level and the Nuxt team is already building 
 
 ### `useId()`
 
-`useId()` is an API that can be used to generate unique-per-application IDs that are guaranteed to be stable across the server and client renders. They can be used to generate IDs for form elements in SSR applications without leading to hydration mismatches:
+`useId()` is an API that can be used to generate unique-per-application IDs that are guaranteed to be stable across the server and client renders. They can be used to generate IDs for form elements and accessibility attributes, and can be used in SSR applications without leading to hydration mismatches:
 
 ```vue
 <script setup>
@@ -128,10 +128,10 @@ You can also limit what types of mismatches are allowed by providing a value to 
 
 3.5 fixes many long-standing issues related to the `defineCustomElement()` API, and adds a number of new capabilities for authoring custom elements with Vue:
 
-- Support app configurations for custom elements via the `configureApp` option. [[Docs]](#TODO)
-- Add `useHost()` and `useShadowRoot()` APIs for accessing the host element and shadow root of a custom element. [[Docs]](#TODO)
-- Support mounting custom elements without Shadow DOM by passing `shadowRoot: false`. [[Docs]](#TODO)
-- Support providing a `nonce` option, which will be attached to `<style>` tags injected by custom elements. [[Docs]](#TODO)
+- Support app configurations for custom elements via the `configureApp` option.
+- Add `useHost()`, `useShadowRoot()`, and `this.$host` APIs for accessing the host element and shadow root of a custom element.
+- Support mounting custom elements without Shadow DOM by passing `shadowRoot: false`.
+- Support providing a `nonce` option, which will be attached to `<style>` tags injected by custom elements.
 
 These new custom-element-only options can be passed to `defineCustomElement` via a second argument:
 
