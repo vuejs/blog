@@ -65,11 +65,11 @@ useDynamicCount(() => count)
 
 For those who prefer to better distinguish destructured props from normal variables, `@vue/language-tools` 2.1 has shipped an opt-in setting to enable inlay hints for them:
 
-<img style="max-width:486px;margin:2em auto;border-radius:8px" alt="inlay hints for destructured props" src="/props-destructure-inlay-hint.png">
+<img style="max-width:486px;margin:2em auto;border-radius:8px" alt="inlay hints for destructured props" src="./images/props-destructure-inlay-hint.png">
 
 Details:
 
-- See [docs](#TODO) for usage and caveats.
+- See [docs](https://vuejs.org/guide/components/props.html#reactive-props-destructure) for usage and caveats.
 - See [RFC#502](https://github.com/vuejs/rfcs/discussions/502) for the history and design rationale behind this feature.
 
 ## SSR Improvements
@@ -167,7 +167,9 @@ const inputRef = useTemplateRef('input')
 
 Prior to 3.5, we recommended using plain refs with variable names matching static `ref` attributes. The old approach required the `ref` attributes to be analyzable by the compiler and thus was limited to static `ref` attributes. In comparison, `useTemplateRef()` matches the refs via runtime string IDs, therefore supporting dynamic ref bindings to changing IDs.
 
-`@vue/language-tools` 2.1 has also implemented [special support for the new syntax](https://github.com/vuejs/language-tools/pull/4644), so you will get auto-completion and warnings when using `useTemplateRef()` based on presence of `ref` attributes in your template.
+`@vue/language-tools` 2.1 has also implemented [special support for the new syntax](https://github.com/vuejs/language-tools/pull/4644), so you will get auto-completion and warnings when using `useTemplateRef()` based on presence of `ref` attributes in your template:
+
+<img style="max-width:724px;margin:2em auto;border-radius:8px" alt="inlay hints for destructured props" src="./images/template-ref.png">
 
 ### Deferred Teleport
 
