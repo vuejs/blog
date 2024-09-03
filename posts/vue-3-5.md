@@ -186,6 +186,29 @@ This behavior requires the `defer` prop because the default behavior needs to be
 
 **Details: [PR#11387](https://github.com/vuejs/core/issues/11387)**
 
+### `onWatcherCleanup()`
+
+3.5 introduces a globally imported API, [`onWatcherCleanup()`](https://vuejs.org/api/reactivity-core#onwatchercleanup), for registering cleanup callbacks in watchers:
+
+```js
+import { watch, onWatcherCleanup } from 'vue'
+
+watch(id, (newId) => {
+  const controller = new AbortController()
+
+  fetch(`/api/${newId}`, { signal: controller.signal }).then(() => {
+    // callback logic
+  })
+
+  onWatcherCleanup(() => {
+    // abort stale request
+    controller.abort()
+  })
+})
+```
+
+- Related: new docs section on [Side Effect Cleanup](https://vuejs.org/guide/essentials/watchers.html#side-effect-cleanup)
+
 ---
 
 For a comprehensive list of changes and features in 3.5, check out of the [the full changelog on GitHub](https://github.com/vuejs/core/blob/main/CHANGELOG.md). Happy hacking!
