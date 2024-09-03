@@ -76,10 +76,9 @@ In addition, the following features are explicitly **NOT** ported:
 
 ### Vue CLI / webpack
 
-1. Upgrade local `@vue/cli-xxx` dependencies the latest version in your major version range (if applicable):
+1. Upgrade local `@vue/cli-xxx` dependencies to the latest version (if applicable):
 
-   - `~4.5.18` for v4
-   - `~5.0.6` for v5
+   - `~5.0.8` for v5
 
 2. Upgrade `vue` to `^2.7.0`. You can also remove `vue-template-compiler` from the dependencies - it is no longer needed in 2.7.
 
