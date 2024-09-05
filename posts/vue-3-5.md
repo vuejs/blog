@@ -46,7 +46,7 @@ const props = withDefaults(
 ```ts
 const { count = 0, msg = 'hello' } = defineProps<{
   count?: number
-  message?: string
+  msg?: string
 }>()
 ```
 
