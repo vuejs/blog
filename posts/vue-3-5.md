@@ -178,7 +178,7 @@ A known constraint of the built-in `<Teleport>` component is that its target ele
 In 3.5, we have introduced a `defer` prop for `<Teleport>` which mounts it after the current render cycle, so this will now work:
 
 ```html
-<Teleport defer target="#container">...</Teleport>
+<Teleport defer to="#container">...</Teleport>
 <div id="container"></div>
 ```
 
