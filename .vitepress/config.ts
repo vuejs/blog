@@ -24,6 +24,14 @@ export default defineConfig({
       }
     ],
     [
+      'link',
+      { 
+        rel: "alternate",
+        type: "application/rss+xml",
+        href: "/feed.rss",
+        title :"RSS Feed",
+      }],
+    [
       'script',
       {
         src: 'https://cdn.usefathom.com/script.js',
